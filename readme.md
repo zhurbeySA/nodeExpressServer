@@ -1,14 +1,20 @@
 Backend application on Node.js and express.
 
+## Run project
+1. Install project dependencies:
+  npm install
 
-Project use nodemone, to run project in development mode install nodemone first with command:
+2. Project use nodemone, to run project in development mode install nodemone first with command:
   npm install nodemone -g
-After that you can run server with command
-  npm run start
+
+3. To run project with nodemone run command:
+  npm run dev // It will run project with babel and nodemon
+
+4. To build project for production you need to run command 'npm run build', and to build and run project in production run command 'npm run serve'
 
 
 
-Project structure:\
+## Project structure:
 
 src\
 │   app.js       &nbsp;&nbsp;&nbsp;&nbsp;  # App entry point\
@@ -19,4 +25,4 @@ src\
 └───models       &nbsp;&nbsp;&nbsp;&nbsp;  # Database models\
 └───services     &nbsp;&nbsp;&nbsp;&nbsp;  # All the business logic is here\
 └───subscribers  &nbsp;&nbsp;&nbsp;&nbsp;  # Event handlers for async task\
-└───types        &nbsp;&nbsp;&nbsp;&nbsp;  # Type declaration files (d.ts) for Typescript\
+└───types        &nbsp;&nbsp;&nbsp;&nbsp;  # Type declaration files (d.ts) for Typescript

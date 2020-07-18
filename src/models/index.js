@@ -1,15 +1,14 @@
-const db = require('./controllers/pgdb.js');
+import db from './controllers/pgdb';
 
-const getDataExample = (req, res) => {
+const getDataExample = async (req, res) => {
   console.log('index model');
-  db.any(req.query)
-    .then((data) => {
-      console.log('got some data');
-      res.json(data);
-    })
-    .catch((error) => {
-      console.log(error);
-    });
+  const data = await db.any(req.query);
+  if (data) {
+    console.log('gom some data');
+    res.json(data);
+  } else {
+    res.send('something went wrong, no data');
+  }
 };
 
 export default getDataExample;
