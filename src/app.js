@@ -1,3 +1,4 @@
+import '@babel/polyfill';
 import express from 'express';
 import indexRouter from './api/index';
 import statisticsRouter from './api/statistics';

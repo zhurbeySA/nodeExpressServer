@@ -21,6 +21,7 @@
     "eslint-plugin-import": "^2.22.0"
   },
   "dependencies": {
+    "@babel/polyfill": "^7.10.4",
     "express": "^4.17.1",
     "pg-promise": "^10.5.8"
   }
