@@ -1,9 +1,11 @@
 import express from 'express';
+import path from 'path';
 
 const router = express.Router();
 
 router.get('/', (req, res) => {
-  res.sendFile('/Users/sergey.zhurbey/Desktop/desktop_files/files/projects/nodeExpressServer/staticPages/Fifteen/index.html');
+  const projectPath = path.resolve('staticPages/Fifteen/index.html');
+  res.sendFile(projectPath);
 });
 
 export default router;
