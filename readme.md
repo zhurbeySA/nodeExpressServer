@@ -12,6 +12,7 @@ Backend application on Node.js and express.
 
 4. To build project for production you need to run command 'npm run build', and to build and run project in production run command 'npm run serve'
 
+**Routes in src/routes contain routes for static files. Those are usually others static projects and included only on the remote server. Locally these routes will just return an error**
 
 
 ## Project structure:
@@ -25,4 +26,6 @@ src\
 └───models       &nbsp;&nbsp;&nbsp;&nbsp;  # Database models\
 └───services     &nbsp;&nbsp;&nbsp;&nbsp;  # All the business logic is here\
 └───subscribers  &nbsp;&nbsp;&nbsp;&nbsp;  # Event handlers for async task\
-└───types        &nbsp;&nbsp;&nbsp;&nbsp;  # Type declaration files (d.ts) for Typescript
+└───types        &nbsp;&nbsp;&nbsp;&nbsp;  # Type declaration files (d.ts) for Typescript\
+└───routes       &nbsp;&nbsp;&nbsp;&nbsp;  # Routes for pages
+
