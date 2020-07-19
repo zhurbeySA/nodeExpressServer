@@ -8,7 +8,8 @@ import FifteenRouter from './routes/Fifteen';
 const port = 3000;
 const app = express();
 
-app.use(express.json());
+app.use(express.json()); // for parsing application/json;
+app.use(express.urlencoded({ extended: true })); // for parsing application/x-www-form-urlencoded
 
 // api routes
 app.use('/api', indexRouter);
