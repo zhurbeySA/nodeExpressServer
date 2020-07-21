@@ -2,15 +2,15 @@ Backend application on Node.js and express.
 
 ## Run project
 1. Install project dependencies:
-  npm install
+  ```npm install```
 
 2. Project use nodemone, to run project in development mode install nodemone first with command:
-  npm install nodemone -g
+  ```npm install nodemone -g```
 
 3. To run project with nodemone run command:
-  npm run dev // It will run project with babel and nodemon
+  ```npm run dev```// It will run project with babel and nodemon
 
-4. To build project for production you need to run command 'npm run build', and to build and run project in production run command 'npm run serve'
+4. To build project for production you need to run command ```npm run build```, and to build and run project in production run command ```npm run serve```
 
 **Routes in src/routes contain routes for static files. Those are usually others static projects and included only on the remote server. Locally these routes will just return an error**
 
@@ -29,3 +29,14 @@ src\
 └───types        &nbsp;&nbsp;&nbsp;&nbsp;  # Type declaration files (d.ts) for Typescript\
 └───routes       &nbsp;&nbsp;&nbsp;&nbsp;  # Routes for pages
 
+## Statis pages routes
+
+```zhurbeysa.xyz/onpointProject``` // onpoint junior front-end developer project\
+```zhurbeysa.xyz/Fifteen``` // course work for programming technologies subject
+
+## API routes
+
+```zhurbeysa.xyz/api/statistics/check``` // Check that connection to database is ok\
+```zhurbeysa.xyz/api/statistics/[day/month/year]/[KPI_Name]?dateFrom='YYYY-MM-DD'&dateTo'YYYY-MM-DD'``` // Get KPI in scale of days/months/years.
+
+If there's no such KPI or query parametres are incorrect you'll get response with status 500, bad request.
