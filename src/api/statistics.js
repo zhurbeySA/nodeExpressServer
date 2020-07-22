@@ -3,18 +3,6 @@ import { getDataExample, getStatisticsByPeriod } from '../models/statistics';
 
 const router = express.Router();
 
-// Check api work route
-router.get('/check', async (req, res) => {
-  console.log('Check api work route');
-
-  const data = await getDataExample();
-  if (data) {
-    res.json(data);
-  } else {
-    res.send('something went wrong, there\'s no data');
-  }
-});
-
 const produceQuery = async (periodScale, req, res) => {
   let data = [];
 
@@ -26,6 +14,18 @@ const produceQuery = async (periodScale, req, res) => {
     res.status(500).send(`Status 500, bad request. ${error}`);
   }
 };
+
+// Check api work route
+router.get('/check', async (req, res) => {
+  console.log('Check api work route');
+
+  const data = await getDataExample();
+  if (data) {
+    res.json(data);
+  } else {
+    res.send('something went wrong, there\'s no data');
+  }
+});
 
 router.get('/year/:statField', async (req, res) => {
   produceQuery('year', req, res);

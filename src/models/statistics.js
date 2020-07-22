@@ -42,7 +42,7 @@ const getStatisticsByPeriod = async (statField, periodScale, dateFrom, dateTo) =
   }
 
   let query = '';
-  const dateFormat = 'YYYY-MM-DD HH:mm:ss';
+  const dateFormat = 'YYYY-MM-DD HH';
 
   // Formate query to database
   if (periodScale === 'day') {
